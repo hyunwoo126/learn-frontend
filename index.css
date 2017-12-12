@@ -113,13 +113,19 @@ li{
     border-color: lightgreen;
 }
 
+.controls{
+    position: relative;
+}
+
 .label_reverse{
     cursor: pointer;
     width: 120px;
 }
 
 .searchBox{
-    float: right;
+    right: 0px;
+    top: 0px;
+    position: absolute;
 }
 .searchBox .fa-search{
     padding: 6px;
@@ -136,3 +142,23 @@ li{
     border-bottom-left-radius: 0px;
     border-left: 0px;
 }
+
+@media (max-width:320px) {}/* smartphones, iPhone, portrait 480x320 phones */
+@media (max-width:375px) {}/* iPhone 6 portrait */
+@media (max-width:481px){
+    
+}/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (max-width:641px){
+    button, .button {
+        padding: 0px 12px;
+    }
+    
+}/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (max-width:961px){
+    .searchBox{
+        position: relative;
+    }
+}/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (max-width:1025px){
+}/* big landscape tablets, laptops, and desktops */
+@media (max-width:1281px){}/* hi-res laptops and desktops */

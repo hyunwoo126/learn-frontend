@@ -376,7 +376,7 @@ class app extends React.Component{
     });
 
     return e('div', { className: 'sortBy_'+this.state.sortBy },
-        e('div',null,
+        e('div',{className: 'controls'},
             e('button', {
                 onClick: ()=>{ this.sortData('term'); },
                 className: 'btn_term'
@@ -393,7 +393,6 @@ class app extends React.Component{
                 onClick: ()=>{ this.sortData('mastery'); },
                 className: 'btn_mastery'
             }, 'mastery'),
-            this.renderSearchBox(),
             e('label', {className: 'label_reverse'}, 
                 e('input', {
                         type: 'checkbox', 
@@ -402,6 +401,7 @@ class app extends React.Component{
                 ),
                 e('span', null, 'reverse order')
             ),
+            this.renderSearchBox(),
             e('div', null, this.getSortExplain())
         ),        
         e('ul', {className: 'ul_list'+ (this.state.visible ? ' show' : '')}, lis)
