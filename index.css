@@ -1,0 +1,138 @@
+body{
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #2b2b2b;
+    max-width: 1200px;
+    margin: auto;
+    padding: 8px;
+    background-color: #fafafa;
+}
+.base_boxshadow_1{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+}
+.base_boxshadow_2{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
+}
+.base_boxshadow_3{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !important;
+}
+.base_boxshadow_4{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
+}
+.base_boxshadow_5{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22) !important;
+}
+.base_boxshadow_1, .base_boxshadow_2, .base_boxshadow_3, .base_boxshadow_4, .base_boxshadow_5{
+    -webkit-transition: all 250ms !important;
+    -moz-transition: all 250ms !important;
+    transition: all 250ms !important;
+}
+
+.pageTitle{
+    margin-bottom: 6px;
+}
+.preface{
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.author{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+}
+.ul_list{
+    margin: 12px 0px 30px 0px;
+    opacity: 0;
+    
+}
+.ul_list.show{
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+}
+
+.rankBlock{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: lightblue;
+    width: 52px;
+    color: #FFFFFF;
+}
+.rankBlock> div{
+    top: 50%;
+    text-align: center;
+    transform: translateY(50%);
+    height: 50%;
+}
+.rankBlock .number{
+    font-size: 34px;
+}
+
+.sortBy_difficulty .rankBlock{
+    background-color: lightsalmon;
+}
+.sortBy_mastery .rankBlock{
+    background-color: lightskyblue;
+}
+.sortBy_importance .rankBlock{
+    background-color: lightgreen;
+}
+
+li{
+    list-style: none;
+    border-bottom: 1px solid #E1E1E1;
+    position: relative;
+    padding-left: 58px;
+}
+
+.icon{
+    height: 30px;
+    vertical-align: baseline;
+    padding: 0px 10px;
+}
+
+.sortBy_difficulty .btn_difficulty{
+    color: #FFFFFF;
+    background-color: lightsalmon;
+    border-color: lightsalmon;
+}
+.sortBy_term .btn_term{
+    color: #FFFFFF;
+    background-color: lightslategrey;
+    border-color: lightslategrey;
+}
+.sortBy_mastery .btn_mastery{
+    color: #FFFFFF;
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+}
+.sortBy_importance .btn_importance{
+    color: #FFFFFF;
+    background-color: lightgreen;
+    border-color: lightgreen;
+}
+
+.label_reverse{
+    cursor: pointer;
+    width: 120px;
+}
+
+.searchBox{
+    float: right;
+}
+.searchBox .fa-search{
+    padding: 6px;
+    font-size: 16px;
+}
+.searchBox input{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.searchBox button{
+    padding: 0 14px;
+    vertical-align: top;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: 0px;
+}
