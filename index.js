@@ -71,7 +71,7 @@ class app extends React.Component{
         {
           term: 'React', icon: 'react-original.svg',
           def:  `A javascript library that can be used for the "view" in the MVC model. 
-                Mostly useful for single page applications. Although you can use React with out JSX, JSX is a popular way to develop react. Often mentioned in comparison with Angular and Vue.js frameworks.`,
+                Mostly useful for single page applications. Backed by Facebook. Although you can use React with out JSX, JSX is a popular way to develop react. Often mentioned in comparison with Angular and Vue.js frameworks.`,
           difficulty: 8, mastery: 5, importance: 5,
         },
         {
@@ -151,7 +151,7 @@ class app extends React.Component{
         },
         {
           term: 'ECMAScript2015',
-          def: 'Introduced important javascript features such as modules, new variable declarations const and let, and classes. A big jump from ES5, which has been around for several years.',
+          def: 'Als known as ES6, or ECMAScript 6th Edition. A big jump from the previous version ES5, which has been around for several years. Introduced important javascript features such as modules, promises, new variable declarations const and let, and classes.',
           difficulty: 6, mastery: 4, importance: 7,
         },
         {
@@ -198,6 +198,11 @@ class app extends React.Component{
             term: 'webview',
             def: 'It is a way to convert a webapp into a mobile app, and it is the basis for things like PhoneGap. Essentially a browser wrapped inside native Android or iOS shell. Although this allows for a single javascript codebase to be used cross-platform, some major disadvantages are that performance is sluggish and often access to native APIs are limited.',
             difficulty: 8, mastery: 7, importance: 4,
+        },
+        {
+          term: 'AngularJS',
+          def: 'One of the big 3 (React, Vue) of frontend frameworks, and oldest of the 3. Backed by Google. There is a complete redesign from Angular 1 to 2. Versions after 2 is just iterations of Angular 2.',
+          difficulty: 8, mastery: 1, importance: 5,
         }
       ]
     }
@@ -259,7 +264,6 @@ class app extends React.Component{
 
     this.setState({
         sortBy: sortBy,
-        asc: asc,
         data: data});
   }
 
@@ -293,7 +297,7 @@ class app extends React.Component{
     if(lvl < 4){ return 'Heard of it.'; }
     else if(lvl < 6){ return 'Learning it now.'; }
     else if(lvl < 9){ return 'Pretty good with it.'; }
-    else{ return 'EXCELLENT'; }
+    else{ return 'Excellent.'; }
   }
 
   getLiClass(lvl){
@@ -343,7 +347,8 @@ class app extends React.Component{
   }
 
   handleReverseOnChange(event){
-    this.sortData(null, !event.target.checked);
+    this.state.asc = !this.state.asc;
+    this.sortData();
   }
 
 
@@ -356,19 +361,24 @@ class app extends React.Component{
 
     var lis = this.state.data.map((obj, i)=>{
         if(!this.hasSearchMatch(i)){ return; }
-      return e('li', {key: i, className: this.getLiClass(obj[this.state.sortBy])},
+      return e('li', {
+          key: i, 
+          //className: this.getLiClass(obj[this.state.sortBy])
+        },
         this.state.sortBy  != 'term' ? e('div', {className: 'rankBlock'}, 
             e('div', null, 
                 e('div', {className: 'number'}, obj[this.state.sortBy]),
-                e('div', null, 'Score')
+                e('div', null, 'score')
             ),
         ) : '',
         e('div', null,
           e('h3', null, obj.term,
-            e('img', {src: obj.icon ? 'icons/'+obj.icon : '', className: 'icon'})),
-          e('div', null, 
-            e('div', null, 'Concept difficulty: '+ this.showDifficulty(obj.difficulty)),
-            e('div', null, 'My mastery: '+ this.showMastery(obj.mastery))
+                obj.icon ? e('img', {src: 'icons/'+obj.icon, className: 'icon'}) : ''
+            ),
+          e('p', null, 
+            e('div', null, `Importance/relevance to frontend dev: ${obj.importance} / 10`),
+            e('div', null, `Concept difficulty: ${obj.difficulty} / 10`),
+            e('div', null, `My mastery of concept: ${obj.mastery} / 10`),
           )
         ), 
         e('p', null, obj.def)
