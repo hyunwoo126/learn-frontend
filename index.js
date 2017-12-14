@@ -95,9 +95,9 @@ class app extends React.Component{
           difficulty: 5, mastery: 2, importance: 6,
         },
         {
-          term: 'PhoneGap',
-          def:  `A tool to build Android and iOS apps using HTML, javascript, and CSS. Resulting app will be based on WebView with a native wrapper that gives acess to native APIs to javascript inside WebView. Disadvantages include sluggish response and animations compared to native counter parts, and limited access to native mobile APIs. Tools like this will become less relevant as mobile browsers are increasingly giving javascript access to native mobile APIs (notifications, etc) and offline features (through manifest) that brings webapps closer to native apps.`,
-          difficulty: 5, mastery: 1, importance: 3,
+          term: 'PhoneGap/Cordova/ionic',
+          def:  `Tools to build Android and iOS apps using HTML, javascript, and CSS. Resulting app will be based on WebView with a native wrapper that gives acess to native APIs to javascript inside WebView. Disadvantages include sluggish response and animations compared to native counter parts, and limited access to native mobile APIs. Tools like this will become less relevant as mobile browsers are increasingly giving javascript access to native mobile APIs (notifications, etc) and offline features (through manifest) that brings webapps closer to native apps.`,
+          difficulty: 5, mastery: 2, importance: 3,
         },
         {
           term: 'Vue.js', icon: 'vuejs-original.svg',
