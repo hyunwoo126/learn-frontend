@@ -203,6 +203,11 @@ class app extends React.Component{
           term: 'AngularJS',
           def: 'One of the big 3 (React, Vue) of frontend frameworks, and oldest of the 3. Backed by Google. There is a complete redesign from Angular 1 to 2. Versions after 2 is just iterations of Angular 2.',
           difficulty: 8, mastery: 1, importance: 5,
+        },
+        {
+          term: 'Git',
+          def: 'Version control system. Not to be confused with Github, which is a way to share code on the web using git. Git works by keeping track of just the changes to your code from one commit to the next. Git is a critical tool when working on a project with multiple people.',
+          difficulty: 7, mastery: 9, importance: 8,
         }
       ]
     }
