@@ -20,7 +20,7 @@ class app extends React.Component{
         },
         {
           term: 'CSS', 
-          def: 'Traditionally, where the style goes. The hardest thing about CSS is layout - how to use display, position, and vertical-align properties to get it to be where you want. CSS is also the primary way to apply "responsive" design.',
+          def: 'Where the style goes. The hardest thing about CSS is layout - how to use display, position, and vertical-align properties to get it to be where you want. CSS is also the primary way to apply "responsive" design.',
           difficulty: 5,
           mastery: 10,
           importance: 10,
@@ -376,7 +376,7 @@ class app extends React.Component{
                 obj.icon ? e('img', {src: 'icons/'+obj.icon, className: 'icon'}) : ''
             ),
           e('div', {className: 'scoresDetail'}, 
-            e('div', null, `Importance/relevance to frontend dev: ${obj.importance} / 10`),
+            e('div', null, `Importance to frontend dev: ${obj.importance} / 10`),
             e('div', null, `Concept difficulty: ${obj.difficulty} / 10`),
             e('div', null, `My mastery of concept: ${obj.mastery} / 10`),
           )

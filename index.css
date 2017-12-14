@@ -155,7 +155,14 @@ li{
 }
 
 @media (max-width:320px) {}/* smartphones, iPhone, portrait 480x320 phones */
-@media (max-width:375px) {}/* iPhone 6 portrait */
+@media (max-width:375px) {
+    .rankBlock{
+        width: 42px;
+    }
+    .ul_list > li{
+        padding-left: 48px;
+    }
+}/* iPhone 6 portrait */
 @media (max-width:481px){}/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media (max-width:641px){
     body{
