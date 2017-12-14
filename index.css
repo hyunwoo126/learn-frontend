@@ -90,6 +90,10 @@ li{
     padding-left: 58px;
 }
 
+.scoresDetail{
+    margin-bottom: 14px;
+}
+
 .icon{
     height: 30px;
     vertical-align: baseline;

@@ -375,7 +375,7 @@ class app extends React.Component{
           e('h3', null, obj.term,
                 obj.icon ? e('img', {src: 'icons/'+obj.icon, className: 'icon'}) : ''
             ),
-          e('p', null, 
+          e('div', {className: 'scoresDetail'}, 
             e('div', null, `Importance/relevance to frontend dev: ${obj.importance} / 10`),
             e('div', null, `Concept difficulty: ${obj.difficulty} / 10`),
             e('div', null, `My mastery of concept: ${obj.mastery} / 10`),
